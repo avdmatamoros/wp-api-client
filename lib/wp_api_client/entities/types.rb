@@ -7,7 +7,7 @@ module WpApiClient
       Term,
       Taxonomy,
       Error,
-      User
+      WpApiClient::Entities::User
     ]
   end
 end
