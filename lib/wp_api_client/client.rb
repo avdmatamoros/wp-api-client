@@ -34,8 +34,10 @@ module WpApiClient
       # Do we have a collection of objects?
       if response_body.is_a? Array
         WpApiClient::Collection.new(response_body, @headers)
-      else
+      elsif response_body.is_a? Hash
         WpApiClient::Entities::Base.build(response_body)
+      else
+        WpApiClient::Entities::Base.build(JSON.parse(response_body))
       end
     end
   end
