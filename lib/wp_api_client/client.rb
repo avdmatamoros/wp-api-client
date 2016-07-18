@@ -1,5 +1,6 @@
 module WpApiClient
   class Client
+    attr_reader :connection
 
     def initialize(connection)
       @connection = connection
