@@ -8,7 +8,8 @@ module WpApiClient
 
       def self.build(resource)
         raise Exception if resource.nil?
-        type = WpApiClient::Entities::Types.find { |type| type.represents?(resource) }
+        puts resource.inspect
+        type = WpApiClient::Entities::Types.find { |type| puts type.inspect; type.represents?(resource) }
         type.new(resource)
       end
 

@@ -1,13 +1,13 @@
 module WpApiClient
   module Entities
     Types = [
+      WpApiClient::Entities::User,
       Image,
       Post,
       Meta,
       Term,
       Taxonomy,
-      Error,
-      WpApiClient::Entities::User
+      Error
     ]
   end
 end
