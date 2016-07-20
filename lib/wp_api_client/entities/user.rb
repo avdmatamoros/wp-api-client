@@ -15,8 +15,32 @@ module WpApiClient
         user['name']
       end
 
+      def first_name
+        user['first_name']
+      end
+
+      def last_name
+        user['last_name']
+      end
+
       def description
-        post['description']
+        user['description']
+      end
+
+      def email
+        user['email']
+      end
+
+      def url
+        user['url']
+      end
+
+      def link
+        user['link']
+      end
+
+      def avatar_urls
+        user['avatar_urls']
       end
     end
   end
